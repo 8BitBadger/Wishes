@@ -18,6 +18,11 @@ public class Collision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject.Destroy(gameObject);
+        Debug.Log("Trigger entered = "+ other.tag);
+        if (other.tag == "Player")
+        {
+            GameObject.Destroy(gameObject);
+        }
+        
     }
 }
